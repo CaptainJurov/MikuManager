@@ -1,12 +1,12 @@
-package cbo;
+package MikuManager;
 
 import io.github.natanimn.BotContext;
 import io.github.natanimn.handlers.MessageHandler;
 import io.github.natanimn.types.Message;
 
-public class StartMessage implements MessageHandler {
+public class EchoMessage implements MessageHandler {
     @Override
     public void handle (BotContext botContext, Message message) {
-        botContext.reply("Здарова заебал").exec();
+        botContext.reply(message.text).exec();
     }
 }

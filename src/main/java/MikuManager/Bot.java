@@ -1,7 +1,6 @@
-package cbo;
+package MikuManager;
 
 import io.github.natanimn.BotClient;
-import io.github.natanimn.filters.Filter;
 import io.github.natanimn.filters.FilterExecutor;
 import io.github.natanimn.handlers.MessageHandler;
 

@@ -1,4 +1,4 @@
-package cbo;
+package MikuManager;
 
 import io.github.natanimn.filters.Filter;
 import io.github.natanimn.filters.FilterExecutor;

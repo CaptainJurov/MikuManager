@@ -1,4 +1,4 @@
-package cbo;
+package MikuManager;
 
 import io.github.natanimn.BotContext;
 import io.github.natanimn.handlers.MessageHandler;
