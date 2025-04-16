@@ -1,4 +1,4 @@
-package MikuManager;
+package MikuManager.Telegram.Filters;
 
 import io.github.natanimn.filters.Filter;
 import io.github.natanimn.filters.FilterExecutor;

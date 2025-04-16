@@ -1,5 +1,6 @@
-package MikuManager;
+package MikuManager.Telegram;
 
+import MikuManager.Telegram.Handlers.OtherMessage;
 import io.github.natanimn.BotClient;
 import io.github.natanimn.filters.FilterExecutor;
 import io.github.natanimn.handlers.MessageHandler;
@@ -16,16 +17,16 @@ public class Bot {
                 .skipOldUpdates(true)
                 .build();
     }
-    public Bot addCommand(FilterExecutor fe, MessageHandler mh) {
+    protected Bot addCommand(FilterExecutor fe, MessageHandler mh) {
         commandHandlers.put(fe, mh);
         return this;
     }
-    void attach(BotClient bot) {
+    protected void attach(BotClient bot) {
         commandHandlers.forEach(bot::onMessage);
         bot.onMessage(new OtherMessage());
     }
 
-    void start() {
+    public void start () {
         attach(bot);
         System.out.println("Запуск бота");
         try {bot.run();}
