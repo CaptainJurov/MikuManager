@@ -1,3 +1,16 @@
 package MikuManager.Game;
 
-public record Player(float balance, int level, int exp, int wins, int loses) {};
+public class Player {
+    private float balance;
+    private int level;
+    private int exp;
+    private int wins;
+    private int loses;
+    Player(float b, int l, int e, int w, int lo) {
+        balance = b;
+        level = l;
+        exp = e;
+        wins = w;
+        loses = lo;
+    }
+};
