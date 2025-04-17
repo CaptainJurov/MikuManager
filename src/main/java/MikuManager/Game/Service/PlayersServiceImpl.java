@@ -1,9 +1,12 @@
-package MikuManager.Game;
+package MikuManager.Game.Service;
+
+import MikuManager.Game.Player;
+import MikuManager.Game.PlayerService;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class PlayersServiceImpl implements PlayerService {
+class PlayersServiceImpl implements PlayerService {
     private final Map<Long, Player> players;
 
     public PlayersServiceImpl () {

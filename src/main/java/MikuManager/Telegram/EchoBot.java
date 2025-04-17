@@ -1,6 +1,6 @@
 package MikuManager.Telegram;
 
-import MikuManager.Game.ContainerService;
+import MikuManager.Game.Service.ContainerService;
 import MikuManager.Telegram.Handlers.EchoMessage;
 import MikuManager.Telegram.Handlers.RegisterHandler;
 import MikuManager.Telegram.Handlers.StartMessage;

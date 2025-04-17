@@ -1,6 +1,6 @@
 package MikuManager.Telegram.Handlers;
 
-import MikuManager.Game.ContainerService;
+import MikuManager.Game.Service.ContainerService;
 import io.github.natanimn.BotContext;
 import io.github.natanimn.types.Message;
 
@@ -11,10 +11,10 @@ public class StartMessage extends AbstractHandler {
     @Override
     public void handle (BotContext botContext, Message message) {
         if (cs.getPlayerService().checkPlayer(message.from.id)) {
-            botContext.reply("Всё заебись не кипишуй").exec();
+            botContext.reply("Всё гут не кипишуй").exec();
         }
         else {
-            botContext.reply("Тебя еблана нет в базе\n\nКак тебя звать?").exec();
+            botContext.reply("Тебя нет в базе\n\nКак тебя звать?").exec();
             botContext.setState(message.from.id, "reg");
         }
     }

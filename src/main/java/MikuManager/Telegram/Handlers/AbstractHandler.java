@@ -1,6 +1,6 @@
 package MikuManager.Telegram.Handlers;
 
-import MikuManager.Game.ContainerService;
+import MikuManager.Game.Service.ContainerService;
 import io.github.natanimn.BotContext;
 import io.github.natanimn.handlers.MessageHandler;
 import io.github.natanimn.types.Message;

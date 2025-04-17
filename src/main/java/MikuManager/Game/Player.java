@@ -17,7 +17,7 @@ public class Player {
         this.name = name;
     }
 
-    Player (String name) {
+    public Player (String name) {
         balance = 100;
         level = 0;
         exp = 0;

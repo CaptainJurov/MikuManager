@@ -1,4 +1,7 @@
-package MikuManager.Game;
+package MikuManager.Game.Service;
+
+import MikuManager.Game.GameService;
+import MikuManager.Game.PlayerService;
 
 public class ContainerService {
     private GameService gs;

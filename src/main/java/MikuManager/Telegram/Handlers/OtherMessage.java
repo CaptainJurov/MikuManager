@@ -7,6 +7,6 @@ import io.github.natanimn.types.Message;
 public class OtherMessage implements MessageHandler {
     @Override
     public void handle (BotContext botContext, Message message) {
-        botContext.reply("ЧЕ ЭТО ЗА ХУЙНЯ").exec();
+        botContext.reply("Чё это").exec();
     }
 }
