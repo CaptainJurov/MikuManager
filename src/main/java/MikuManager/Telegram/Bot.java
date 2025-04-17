@@ -8,7 +8,7 @@ import io.github.natanimn.handlers.MessageHandler;
 import java.util.LinkedHashMap;
 
 public class Bot {
-    protected BotClient bot;
+    private final BotClient bot;
     private final LinkedHashMap<FilterExecutor, MessageHandler> commandHandlers = new LinkedHashMap<FilterExecutor, MessageHandler>();
     Bot(String TOKEN) {
         bot = new BotClient.Builder(TOKEN)

@@ -7,7 +7,11 @@ import io.github.natanimn.types.Message;
 
 public abstract class AbstractHandler implements MessageHandler {
     protected GameService gs;
-    AbstractHandler(GameService gs) {this.gs = gs;}
+
+    AbstractHandler (GameService gs) {
+        this.gs = gs;
+    }
+
     @Override
     public void handle (BotContext botContext, Message message) {
     }
