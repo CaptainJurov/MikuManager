@@ -1,20 +1,19 @@
 package MikuManager.Telegram.Handlers;
 
-import MikuManager.Game.GameService;
-import MikuManager.Game.Player;
+import MikuManager.Game.ContainerService;
 import io.github.natanimn.BotContext;
 import io.github.natanimn.types.Message;
 
 public class RegisterHandler extends AbstractHandler{
-    public RegisterHandler (GameService gs) {
-        super(gs);
+    public RegisterHandler (ContainerService cs) {
+        super(cs);
     }
 
     @Override
     public void handle (BotContext botContext, Message message) {
-        if (!gs.ps.checkPlayer(message.text)) {
+        if (!cs.getPlayerService().checkPlayer(message.text)) {
             try {
-                gs.ps.register(message.from.id, message.text);
+                cs.getPlayerService().register(message.from.id, message.text);
                 botContext.reply("Будем знать").exec();
                 botContext.clearState(message.from.id);
             } catch (Exception e) {

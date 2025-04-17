@@ -1,15 +1,15 @@
 package MikuManager.Telegram.Handlers;
 
-import MikuManager.Game.GameService;
+import MikuManager.Game.ContainerService;
 import io.github.natanimn.BotContext;
 import io.github.natanimn.handlers.MessageHandler;
 import io.github.natanimn.types.Message;
 
 public abstract class AbstractHandler implements MessageHandler {
-    protected GameService gs;
+    protected ContainerService cs;
 
-    AbstractHandler (GameService gs) {
-        this.gs = gs;
+    AbstractHandler (ContainerService cs) {
+        this.cs = cs;
     }
 
     @Override

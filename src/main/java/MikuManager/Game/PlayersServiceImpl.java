@@ -3,11 +3,13 @@ package MikuManager.Game;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PlayersService {
+public class PlayersServiceImpl implements PlayerService {
     private final Map<Long, Player> players;
-    PlayersService() {
-        players = new HashMap<Long, Player>();
+
+    public PlayersServiceImpl () {
+        this.players = new HashMap<Long, Player>();
     }
+
     public boolean checkPlayer( Long id) {
         return getPlayer(id)!=null;
     }
