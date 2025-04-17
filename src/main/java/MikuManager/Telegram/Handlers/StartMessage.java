@@ -11,6 +11,11 @@ public class StartMessage extends AbstractHandler implements MessageHandler {
     }
     @Override
     public void handle (BotContext botContext, Message message) {
-        botContext.reply("Здарова заебал").exec();
+        if (gs.checkPlayer(message.from.id)) {
+            botContext.reply("Всё заебись не кипишуй").exec();
+        }
+        else {
+            botContext.reply("Тебя еблана нет в базе").exec();
+        }
     }
 }
